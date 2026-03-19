@@ -1,0 +1,160 @@
+:root{
+    --black:#0c0c0c;
+}
+
+@font-face {
+    font-family: man;
+    src: url(./Manrope-VariableFont_wght.woff2);
+}
+body{
+    background-color:var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.section1{
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.section1 h1{
+   
+    font-size: 130px;
+    font-family: man;
+    font-weight: 500px;
+    position: relative;
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/033/351/469/small_2x/texture-modern-soft-gradient-background-ai-generated-photo.jpg);
+
+    background-size:cover;
+    background-clip:text;
+    color:transparent;
+    background-position: 10% 50%;
+    
+
+}
+.section1 h1.bloom{
+    position:absolute;
+    filter: blur(80px);
+
+
+}
+.section2 {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    
+
+}
+
+.section2 .input .taskinput{
+    font-size: 35px;
+    border-radius: 5px;
+    background-color:lavenderblush;
+    padding:8px;
+    font-family: man;
+    border:none;
+    outline:none;
+    width:500px;
+}
+
+.section2 .input .taskinput::placeholder{
+    color:#0c0c0c;
+    opacity: 1;
+    font-family: man;
+    font-size:35px;
+}
+.section2 .input #add{
+    background-color:pink;
+    font-size:38px;
+    padding:10px;
+    border-radius: 5px;
+    border:none;
+    outline:none;
+}
+
+
+
+#list{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px;
+    padding-top: 30px;
+    /* margin: 30px auto; */
+    flex-direction: column;
+    width:100%;
+    gap:20px;
+}
+
+.task1{
+    background-color: lavenderblush;
+    width:580px;
+    padding:12px ;
+    border-radius:5px;
+    border:none;
+    outline:none;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    /* box-shadow: 0 4px 6px rgba(27, 16, 105, 0.1); */
+
+}
+.task1 li{
+    list-style:none;
+    text-align: left;
+    font-family:man;
+    flex-grow:1;
+    font-size: 20px;
+
+}
+.task1 .ri-delete-bin-line{
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    
+   
+}
+.task1 .ri-delete-bin-line:hover{
+    transform: scale(1.2);
+    color:red;
+
+}
+
+.section2 .input #add:hover{
+    background-color:lavender ;
+}
+
+@media(max-width:600px)
+{
+    .section1 h1{
+        font-size:60px;
+    }
+    .section2 .input{
+        display:flex;
+        flex-direction: row;
+        
+        gap:10px;
+        width:90%;
+    }
+    .section2 .input .taskinput, 
+    .task1 {
+        width: 100% !important; 
+        font-size: 20px;         
+    }
+
+
+    .section2 .input #add {
+        width: 30%;
+        font-size: 25px;
+    }
+    .section2 .input .taskinput::placeholder{
+        font-size: 20px;
+    }
+    
+    #list {
+        width: 90%; 
+        margin: 20px auto;
+    }
+}
